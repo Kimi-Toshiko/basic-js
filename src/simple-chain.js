@@ -2,8 +2,9 @@ const CustomError = require("../extensions/custom-error");
 
 const chainMaker = {
   getLength() {
-    throw new CustomError('Not implemented');
-    // remove line with error and write your code here
+    let counter = 0;
+    this.split('').map(el => {if (el === '(') counter++});
+    return counter;
   },
   addLink(value) {
     throw new CustomError('Not implemented');
